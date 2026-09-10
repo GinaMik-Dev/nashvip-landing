@@ -91,7 +91,8 @@
             <h3>Lumière Estate</h3>
             <div class="meta">Golden Manor + The Noir • Nashville, Tennessee</div>
             <p>Book Golden Manor and The Noir together in one reservation when your group needs both neighboring luxury homes.</p>
-            <a class="btn airbnb-book" href="https://www.airbnb.com/rooms/1395781773183691384?guests=1&adults=1&s=67&unique_share_id=21de1ca4-06d9-4989-8c3f-24e4d14fe695&source_impression_id=p3_1789077744_P3LVDr9z-gFmtlp0">View Lumière Estate on Airbnb</a>
+            <a class="btn airbnb-book" href="https://www.airbnb.com/rooms/1395781773183691384?guests=1&adults=1&s=67&unique_share_id=21de1ca4-06d9-4989-8c3f-24e4d14fe695&source_impression_id=p3_1789077744_P3LVDr9z-gFmtlp0" target="_blank" rel="noopener"
+               onclick="if (typeof gtag === 'function') { gtag('event','ads_conversion_outbound_click'); }">View Lumière Estate on Airbnb</a>
           </div>
         </article>
 
@@ -101,7 +102,8 @@
             <h3>Golden Manor</h3>
             <div class="meta">Nashville, Tennessee</div>
             <p>A polished Nashville group stay with an inviting rooftop space made for gathering.</p>
-            <a class="btn airbnb-book" href="https://www.airbnb.com/rooms/1343518728743245102">Book on Airbnb</a>
+            <a class="btn airbnb-book" href="https://www.airbnb.com/rooms/1343518728743245102" target="_blank" rel="noopener"
+               onclick="if (typeof gtag === 'function') { gtag('event','ads_conversion_outbound_click'); }">Book on Airbnb</a>
           </div>
         </article>
 
@@ -111,7 +113,8 @@
             <h3>The Noir</h3>
             <div class="meta">Nashville, Tennessee</div>
             <p>A sophisticated Nashville townhouse with bold interiors and a rooftop setting built for memorable evenings.</p>
-            <a class="btn airbnb-book" href="https://www.airbnb.com/rooms/1304489912296800518?guests=1&adults=1&s=67&unique_share_id=b14e05e3-ef77-47a4-9de0-acd1f35341fd&source_impression_id=p3_1789077774_P31o2whCeHybNipD">Book on Airbnb</a>
+            <a class="btn airbnb-book" href="https://www.airbnb.com/rooms/1304489912296800518?guests=1&adults=1&s=67&unique_share_id=b14e05e3-ef77-47a4-9de0-acd1f35341fd&source_impression_id=p3_1789077774_P31o2whCeHybNipD" target="_blank" rel="noopener"
+               onclick="if (typeof gtag === 'function') { gtag('event','ads_conversion_outbound_click'); }">Book on Airbnb</a>
           </div>
         </article>
 
@@ -121,7 +124,8 @@
             <h3>Grandview</h3>
             <div class="meta">Nashville, Tennessee</div>
             <p>A bright, stylish stay highlighted by an impressive rooftop setting and sunset views.</p>
-            <a class="btn airbnb-book" href="https://www.airbnb.com/rooms/1463200144204502992?guests=1&adults=1&s=67&unique_share_id=452a059d-b7b7-4ce2-b292-d4402dcc7567&source_impression_id=p3_1789077720_P316j2clSxRwIqaI">Book on Airbnb</a>
+            <a class="btn airbnb-book" href="https://www.airbnb.com/rooms/1463200144204502992?guests=1&adults=1&s=67&unique_share_id=452a059d-b7b7-4ce2-b292-d4402dcc7567&source_impression_id=p3_1789077720_P316j2clSxRwIqaI" target="_blank" rel="noopener"
+               onclick="if (typeof gtag === 'function') { gtag('event','ads_conversion_outbound_click'); }">Book on Airbnb</a>
           </div>
         </article>
 
@@ -131,7 +135,8 @@
             <h3>Skyline Reserve</h3>
             <div class="meta">Nashville, Tennessee</div>
             <p>A rooftop-pool stay with a dramatic Nashville backdrop—ideal for a group weekend in the city.</p>
-            <a class="btn airbnb-book" href="https://www.airbnb.com/rooms/613590508944765979">Book on Airbnb</a>
+            <a class="btn airbnb-book" href="https://www.airbnb.com/rooms/613590508944765979" target="_blank" rel="noopener"
+               onclick="if (typeof gtag === 'function') { gtag('event','ads_conversion_outbound_click'); }">Book on Airbnb</a>
           </div>
         </article>
       </div>
@@ -158,45 +163,8 @@
 </footer>
 
 <script>
-  // Fire the GA4 event that Google Ads is using as the Primary Outbound click conversion.
-  function gtagSendEvent(url) {
-    var navigated = false;
-
-    function go() {
-      if (navigated) return;
-      navigated = true;
-      if (typeof url === 'string') {
-        window.location.href = url;
-      }
-    }
-
-    // Fallback: always continue to Airbnb even if the analytics script
-    // is blocked, slow, or the event callback never fires.
-    var fallbackTimer = setTimeout(go, 1200);
-
-    if (typeof gtag === 'function') {
-      gtag('event', 'ads_conversion_outbound_click', {
-        'event_callback': function () {
-          clearTimeout(fallbackTimer);
-          go();
-        },
-        'event_timeout': 1000
-      });
-    } else {
-      clearTimeout(fallbackTimer);
-      go();
-    }
-
-    return false;
-  }
-
-  document.addEventListener('click', function(event) {
-    const link = event.target.closest('a.airbnb-book');
-    if (!link) return;
-
-    event.preventDefault();
-    gtagSendEvent(link.href);
-  });
+  // Airbnb buttons open normally in a new tab.
+  // Their inline onclick sends the GA4 event used by Google Ads as the Primary Outbound click conversion.
 </script>
 </body>
 </html>
