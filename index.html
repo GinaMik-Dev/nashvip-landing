@@ -160,16 +160,32 @@
 <script>
   // Fire the GA4 event that Google Ads is using as the Primary Outbound click conversion.
   function gtagSendEvent(url) {
-    var callback = function () {
-      if (typeof url === 'string') {
-        window.location = url;
-      }
-    };
+    var navigated = false;
 
-    gtag('event', 'ads_conversion_outbound_click', {
-      'event_callback': callback,
-      'event_timeout': 2000
-    });
+    function go() {
+      if (navigated) return;
+      navigated = true;
+      if (typeof url === 'string') {
+        window.location.href = url;
+      }
+    }
+
+    // Fallback: always continue to Airbnb even if the analytics script
+    // is blocked, slow, or the event callback never fires.
+    var fallbackTimer = setTimeout(go, 1200);
+
+    if (typeof gtag === 'function') {
+      gtag('event', 'ads_conversion_outbound_click', {
+        'event_callback': function () {
+          clearTimeout(fallbackTimer);
+          go();
+        },
+        'event_timeout': 1000
+      });
+    } else {
+      clearTimeout(fallbackTimer);
+      go();
+    }
 
     return false;
   }
