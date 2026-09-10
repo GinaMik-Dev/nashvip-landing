@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NashVIP Host | Luxury Nashville Stays</title>
+  <meta name="description" content="Luxury Nashville vacation rentals for group getaways, celebrations, and unforgettable weekends." />
+
+  <!-- GOOGLE ADS TAG: replace AW-XXXXXXXXX with your real Google Ads Conversion ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXXXX');
+  </script>
+
+  <style>
+    :root{
+      --bg:#f5f1e9;
+      --ink:#171717;
+      --card:#fffdf9;
+      --muted:#6b665e;
+      --line:#d8d0c4;
+      --accent:#b59867;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.5;
+    }
+    .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+    header{
+      position:sticky;top:0;z-index:10;
+      background:rgba(245,241,233,.95);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(10px);
+    }
+    .nav{
+      min-height:72px;
+      display:flex;align-items:center;justify-content:space-between;gap:20px;
+    }
+    .brand{
+      font-family:Georgia, 'Times New Roman', serif;
+      font-weight:700;font-size:28px;letter-spacing:.02em;
+    }
+    .nav a{color:var(--ink);text-decoration:none;font-weight:600}
+    .hero{
+      padding:92px 0 76px;
+      background:
+        radial-gradient(circle at 70% 20%, rgba(181,152,103,.25), transparent 28%),
+        linear-gradient(135deg,#f8f5ef 0%,#ece5d8 100%);
+      border-bottom:1px solid var(--line);
+    }
+    .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:700;color:var(--muted)}
+    h1{
+      margin:10px 0 18px;
+      font-family:Georgia, 'Times New Roman', serif;
+      font-size:clamp(44px,7vw,82px);
+      line-height:.98;
+      max-width:850px;
+    }
+    .hero p{max-width:700px;font-size:20px;color:var(--muted);margin:0 0 28px}
+    .btn{
+      display:inline-block;
+      background:var(--ink);color:#fff;
+      padding:14px 22px;border-radius:999px;
+      text-decoration:none;font-weight:700;
+      transition:.2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);opacity:.9}
+    section{padding:72px 0}
+    .section-title{
+      font-family:Georgia,'Times New Roman',serif;
+      font-size:40px;margin:0 0 10px;
+    }
+    .section-sub{margin:0 0 28px;color:var(--muted)}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:22px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:22px;
+      overflow:hidden;
+      box-shadow:0 10px 30px rgba(0,0,0,.04);
+    }
+    .photo{
+      aspect-ratio:16/10;
+      background:
+        linear-gradient(135deg,rgba(23,23,23,.08),rgba(181,152,103,.28)),
+        #e4ddd1;
+      display:flex;align-items:center;justify-content:center;
+      color:#514b43;font-family:Georgia,serif;font-size:22px;
+      text-align:center;padding:20px;
+    }
+    .content{padding:24px}
+    .content h3{font-family:Georgia,serif;font-size:30px;margin:0 0 8px}
+    .meta{color:var(--muted);font-size:14px;margin-bottom:14px}
+    .content p{color:var(--muted);margin:0 0 20px}
+    .features{
+      display:grid;grid-template-columns:repeat(3,1fr);
+      gap:14px;margin-top:28px;
+    }
+    .feature{
+      background:var(--card);border:1px solid var(--line);
+      border-radius:18px;padding:18px;text-align:center;
+    }
+    .feature strong{display:block;font-size:18px;margin-bottom:4px}
+    .feature span{color:var(--muted);font-size:13px}
+    .cta{
+      background:#171717;color:#fff;border-radius:26px;padding:38px;
+      display:flex;justify-content:space-between;gap:24px;align-items:center;
+    }
+    .cta h2{font-family:Georgia,serif;font-size:38px;margin:0 0 6px}
+    .cta p{margin:0;color:#d9d9d9}
+    .cta .btn{background:#fff;color:#171717;white-space:nowrap}
+    footer{padding:34px 0 44px;color:var(--muted);font-size:14px}
+    @media(max-width:760px){
+      .grid{grid-template-columns:1fr}
+      .features{grid-template-columns:1fr}
+      .cta{flex-direction:column;align-items:flex-start}
+      .nav{min-height:62px}
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand">NashVIP Host</div>
+    <a href="#stays">View Stays</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Luxury Nashville Group Stays</div>
+      <h1>Your Nashville weekend, elevated.</h1>
+      <p>Spacious, stylish stays designed for celebrations, girls' trips, family getaways, and unforgettable group weekends.</p>
+      <a class="btn" href="#stays">Explore Properties</a>
+    </div>
+  </section>
+
+  <section id="stays">
+    <div class="wrap">
+      <h2 class="section-title">Featured Stays</h2>
+      <p class="section-sub">Choose a property, then continue to Airbnb to view live availability and booking details.</p>
+
+      <div class="grid">
+
+        <article class="card">
+          <div class="photo">Replace with a Golden Manor photo</div>
+          <div class="content">
+            <h3>The Golden Manor</h3>
+            <div class="meta">Nashville, Tennessee</div>
+            <p>A luxury group stay built for memorable Nashville weekends.</p>
+            <a class="btn airbnb-book" href="https://www.airbnb.com/rooms/1343518728743245102" target="_blank" rel="noopener">Book on Airbnb</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="photo">Replace with a Skyline property photo</div>
+          <div class="content">
+            <h3>Skyline @ The Gulch</h3>
+            <div class="meta">Nashville, Tennessee</div>
+            <p>Downtown energy, rooftop style, and room for your group to stay together.</p>
+            <a class="btn airbnb-book" href="https://www.airbnb.com/rooms/613590508944765979" target="_blank" rel="noopener">Book on Airbnb</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="photo">Replace with a property photo</div>
+          <div class="content">
+            <h3>The Noir</h3>
+            <div class="meta">Nashville, Tennessee</div>
+            <p>Add a short property description here.</p>
+            <a class="btn airbnb-book" href="#" data-needs-link="true">Add Airbnb Link</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="photo">Replace with a property photo</div>
+          <div class="content">
+            <h3>Grandview</h3>
+            <div class="meta">Nashville, Tennessee</div>
+            <p>Add a short property description here.</p>
+            <a class="btn airbnb-book" href="#" data-needs-link="true">Add Airbnb Link</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="features">
+        <div class="feature"><strong>Luxury Stays</strong><span>Designed for special trips</span></div>
+        <div class="feature"><strong>Group Friendly</strong><span>Stay together in Nashville</span></div>
+        <div class="feature"><strong>Book on Airbnb</strong><span>Live pricing & availability</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta">
+        <div>
+          <h2>Find your Nashville stay.</h2>
+          <p>Browse the featured properties above and continue to Airbnb when you're ready.</p>
+        </div>
+        <a class="btn" href="#stays">View Properties</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    © NashVIP Host. This landing page links to third-party Airbnb listings for booking.
+  </div>
+</footer>
+
+<script>
+  /*
+    GOOGLE ADS CLICK CONVERSION:
+    Replace AW-XXXXXXXXX/CONVERSION_LABEL with the exact "send_to" value
+    from the Google Ads conversion action we create later.
+  */
+  const GOOGLE_ADS_SEND_TO = 'AW-XXXXXXXXX/CONVERSION_LABEL';
+
+  document.addEventListener('click', function (event) {
+    const link = event.target.closest('a');
+    if (!link) return;
+
+    const href = link.getAttribute('href') || '';
+    const isAirbnb = href.includes('airbnb.com');
+
+    if (!isAirbnb) return;
+
+    // Fire the Google Ads conversion event for ANY Airbnb link.
+    if (typeof gtag === 'function' && !GOOGLE_ADS_SEND_TO.includes('XXXXXXXXX')) {
+      gtag('event', 'conversion', {
+        'send_to': GOOGLE_ADS_SEND_TO
+      });
+    }
+  });
+</script>
+</body>
+</html>
