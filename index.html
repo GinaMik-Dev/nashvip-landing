@@ -165,14 +165,7 @@
 <script>
   // Airbnb buttons open normally in a new tab.
   // Their inline onclick sends the GA4 event used by Google Ads as the Primary Outbound click conversion.
-  document.addEventListener('click', function(event) {
-  const link = event.target.closest('a.airbnb-book');
-  if (!link) return;
-
-  if (typeof gtag === 'function') {
-    gtag('event', 'ads_conversion_outbound_click');
-  }
-});
+ 
 </script>
 </body>
 </html>
